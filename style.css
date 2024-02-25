@@ -1,0 +1,698 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(8, 27, 41, 0.8);
+    backdrop-filter: blur(10px); 
+    ;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+    /* Change color on hover and for the active tab */
+}
+
+
+
+/* Display dropdown icon only on mobile devices */
+@media screen and (min-width: 769px) {
+    .menu-icon {
+        display: none;
+        /* Hide the dropdown icon on desktop screens */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+        /* Hide the navbar by default */
+        transition: top 0.3s ease, opacity 0.3s ease;
+        /* Smooth transition for top position and opacity */
+        position: fixed;
+        top: -100%;
+        /* Initially off-screen */
+        left: 0;
+        width: 100%;
+        background-color: rgba(8, 27, 41, 0.8);
+        /* Background color with transparency */
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        /* Initially hidden */
+    }
+
+    .menu-icon {
+        display: block;
+        /* Display the menu icon */
+        font-size: 28px;
+        color: #ededed;
+        cursor: pointer;
+    }
+
+    .navbar.active {
+        display: block;
+        /* Display the navbar when active */
+        top: 60px;
+        /* Adjust based on your header height */
+        opacity: 1;
+        /* Show with smooth fade-in effect */
+    }
+
+    .navbar.active a {
+        margin-bottom: 10px;
+    }
+}
+
+/* Home content */
+.home-content {
+    padding-top: 100px;
+}
+
+.content {
+    padding: 100px 10%;
+}
+
+.home-content h1,
+.home-content h3 {
+    font-weight: 700;
+}
+
+.home-content h1 {
+    font-size: 45px;
+    line-height: 1.5;
+}
+
+.home-content h3 {
+    font-size: 28px;
+    color: #00abf0;
+    margin-bottom: 20px;
+    height: 28px;
+}
+
+.home-content p {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+    /* Adjusted button box width */
+    height: 50px;
+
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:hover {
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 30px;
+        /* Decreased padding for mobile */
+    }
+
+    .home-content {
+        padding-top: 200px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .text-content {
+        width: 100%;
+        margin-bottom: 30px;
+        /* Decreased margin for better spacing */
+    }
+
+    .text-content h1 {
+        font-size: 38px;
+        /* Decreased font size for mobile */
+    }
+
+    .btn-box {
+        width: 300px;
+        /* Adjusted button box width for mobile */
+        margin-bottom: 20px;
+        /* Reduced space between buttons for mobile */
+
+    }
+
+    .btn-box a {
+        width: 130px;
+        /* Adjusted button width for mobile */
+        height: 55px;
+        /* Adjusted button height for mobile */
+        font-size: 18px;
+        /* Adjusted font size for mobile */
+    }
+}
+
+
+
+/* CSS for Watermark */
+.watermark {
+    position: fixed;
+    bottom: 0;
+    right: -267px;
+    /* Adjust the right position to move the image more to the right */
+    opacity: 0.2;
+    /* Adjust the opacity as needed */
+    z-index: -1;
+    /* Ensure the image stays behind other content */
+    /* Add any additional styling for the watermark image */
+    width: 550px;
+    /* Adjust the width of the image */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+
+.background-image {
+    background-image: url('Images/background.jpg');
+    /* Specify the path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+/* Contact Links */
+.contact-content {
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.contact-left,
+.contact-right {
+    flex: 1;
+}
+
+.contact-photo {
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.contact-photo img {
+    width: 300px;
+    /* Adjust width as needed */
+    height: auto;
+    border-radius: 1ch;
+}
+
+.contact-links {
+    text-align: center;
+}
+
+.contact-links a {
+    color: #00abf0;
+    font-size: 30px;
+    margin: 0 12px;
+}
+
+.contact-links a:hover {
+    color: #ededed;
+}
+
+.contact-right h2 {
+    color: #00abf0;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact-right p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    /* Set background color to transparent */
+    color: #fff;
+    /* Set text color to white */
+}
+
+
+.contact-form button {
+    border: 2px solid #00abf0;
+    ;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #00abf0;
+}
+
+.contact-form button:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/* for mobile view */
+/* For screens smaller than 768px (mobile devices) */
+@media screen and (max-width: 768px) {
+
+    /* Adjust layout for contact page */
+    .contact-content {
+        padding: 30px 10%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        padding-bottom: 5px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        /* Occupy full width */
+        margin-bottom: 30px;
+        /* Add space between sections */
+    }
+
+    .contact-photo img {
+        width: 80%;
+        /* Adjust image width */
+        max-width: 300px;
+        /* Limit maximum width */
+        height: auto;
+        /* Automatically adjust height */
+        border-radius: 10px;
+        /* Add border radius if needed */
+    }
+
+    .contact-links {
+        display: flex;
+        /* Display links horizontally */
+        justify-content: center;
+        /* Center align links */
+    }
+
+    .contact-links a {
+        margin: 0 10px;
+        /* Add space between links */
+    }
+
+    .contact-right h2 {
+        font-size: 28px;
+        /* Decrease heading size */
+        margin-bottom: 10px;
+        /* Decrease margin */
+    }
+
+    .contact-right p {
+        font-size: 15px;
+        /* Decrease text size */
+        margin-bottom: 10px;
+        /* Decrease margin */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+        /* Decrease input text size */
+        margin-bottom: 15px;
+        /* Increase margin */
+    }
+
+    .contact-form button {
+        font-size: 14px;
+        /* Decrease button text size */
+        padding: 8px 16px;
+        /* Decrease padding */
+    }
+}
+
+
+/* Skills Page */
+.skills-content {
+    padding: 0px 10%;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.skills-content h2 {
+    color: #00abf0;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.left-section {
+    float: left;
+    width: 40%;
+    ;
+}
+
+.right-section {
+    float: right;
+    width: 40%;
+}
+
+.skill {
+    margin-bottom: 80px;
+    /* Add space between each skill section */
+}
+
+
+.skill h3 {
+    color: #ededed;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #333;
+    height: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #00abf0;
+    border-radius: 10px;
+}
+
+.sub-skills {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-skills li {
+    color: #ededed;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-content {
+        padding: 50px 10%;
+        padding-top: 100px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .skills-content h2 {
+        font-size: 28px;
+        /* Decrease heading size for mobile */
+        text-align: center;
+        /* Center align heading for mobile */
+    }
+
+    .left-section,
+    .right-section {
+        float: none;
+        width: 100%;
+        /* Make sections full width for mobile */
+    }
+
+    .skill {
+        margin-bottom: 40px;
+        /* Decrease margin bottom for mobile */
+    }
+
+    .skill h3 {
+        font-size: 22px;
+        /* Decrease heading size for mobile */
+        text-align: center;
+        /* Center align heading for mobile */
+    }
+
+    .progress-bar {
+        margin-bottom: 5px;
+        /* Decrease margin bottom for mobile */
+    }
+
+    .sub-skills li {
+        font-size: 14px;
+        /* Decrease font size for mobile */
+    }
+}
+
+
+/* Project Page */
+.projects-content {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.projects-content h2 {
+    color: #00abf0;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project h3 {
+    color: #ededed;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #ededed;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .projects-content {
+        padding: 30px 10%;
+        /* Decreased padding for mobile */
+        padding-top: 300px;
+    }
+
+    .projects-content h2 {
+        font-size: 28px;
+        /* Decreased font size for mobile */
+    }
+
+    .project h3 {
+        font-size: 22px;
+        /* Decreased font size for mobile */
+    }
+
+    .project p {
+        font-size: 16px;
+        /* Decreased font size for mobile */
+    }
+}
+
+
+
+
+/* About Page */
+.about-content {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.about-content h2 {
+    color: #00abf0;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #ededed;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        padding: 100px 10%;
+        padding-top: 100px;
+        padding-bottom: 0px;
+        /* Adjust padding for mobile */
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+        /* Decrease heading size for mobile */
+    }
+
+    .about-content p {
+        font-size: 18px;
+        /* Decrease text size for mobile */
+    }
+}
+
+
+/* thanks */
+/* Style for the 'thanks' section */
+#thanks {
+    text-align: center;
+    padding: 50px 0; /* Adjust padding as needed */
+    padding-top: 200px;
+}
+
+.thanks-content {
+    color: #ededed; /* Text color */
+}
+
+.thanks-content h2 {
+    color: #00abf0; /* Heading color */
+    font-size: 32px; /* Heading font size */
+}
+
+.thanks-content h1 {
+    color: #00abf0; /* Heading color */
+    font-size: 40px; /* Heading font size */
+}
+
+.thanks-content p {
+    font-size: 20px; /* Paragraph font size */
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: rgba(8, 27, 41, 0.8);
+    /* Adjust the opacity value (0.8 in this example) */
+    color: #ededed;
+    text-align: center;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure the footer is above other content */
+    backdrop-filter: blur(10px); /* Add blur effect */
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer i {
+    vertical-align: middle;
+}
