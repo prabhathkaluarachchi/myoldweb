@@ -140,6 +140,7 @@ body {
     font-size: 18px;
     margin-top: 30px;
     margin-bottom: 50px;
+
 }
 
 .btn-box {
@@ -290,40 +291,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
 
 }
 
-.contact-left,
-.contact-right {
-    flex: 1;
-}
-
-.contact-photo {
-    text-align: center;
-    margin-bottom: 10px;
-
-}
-
-.contact-photo img {
-    width: 300px;
-    /* Adjust width as needed */
-    height: auto;
-    border-radius: 1ch;
-}
-
-.contact-links {
-    text-align: center;
-}
-
-.contact-links a {
-    color: #00abf0;
-    font-size: 30px;
-    margin: 0 12px;
-}
-
-.contact-links a:hover {
-    color: #ededed;
-}
 
 .contact-right h2 {
     color: #00abf0;
@@ -342,12 +314,12 @@ body {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #00abf0;
     border-radius: 5px;
     font-size: 16px;
     background-color: transparent;
     /* Set background color to transparent */
-    color: #fff;
+    color: #ededed;
     /* Set text color to white */
 }
 
@@ -360,6 +332,8 @@ body {
     font-size: 16px;
     cursor: pointer;
     background-color: #00abf0;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .contact-form button:hover {
@@ -374,10 +348,11 @@ body {
     /* Adjust layout for contact page */
     .contact-content {
         padding: 30px 10%;
+        padding-top: 200px;
         flex-direction: column;
-        align-items: center;
-        margin-top: 80px;
         padding-bottom: 5px;
+        margin: auto;
+        text-align: center;
     }
 
     .contact-left,
@@ -388,28 +363,7 @@ body {
         /* Add space between sections */
     }
 
-    .contact-photo img {
-        width: 80%;
-        /* Adjust image width */
-        max-width: 300px;
-        /* Limit maximum width */
-        height: auto;
-        /* Automatically adjust height */
-        border-radius: 10px;
-        /* Add border radius if needed */
-    }
 
-    .contact-links {
-        display: flex;
-        /* Display links horizontally */
-        justify-content: center;
-        /* Center align links */
-    }
-
-    .contact-links a {
-        margin: 0 10px;
-        /* Add space between links */
-    }
 
     .contact-right h2 {
         font-size: 28px;
@@ -431,6 +385,7 @@ body {
         /* Decrease input text size */
         margin-bottom: 15px;
         /* Increase margin */
+        border: 1px solid #00abf0;
     }
 
     .contact-form button {
@@ -446,7 +401,9 @@ body {
 .skills-content {
     padding: 0px 10%;
     text-align: left;
-    padding-top: 20px;
+    padding-top: 10px;
+    margin-left: 12%;
+    margin-right: 12%;
 }
 
 .skills-content h2 {
@@ -477,6 +434,7 @@ body {
     color: #ededed;
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: right;
 }
 
 .progress-bar {
@@ -508,8 +466,10 @@ body {
     .skills-content {
         padding: 50px 10%;
         padding-top: 100px;
-        text-align: center;
+        text-align: left;
         padding-bottom: 10px;
+        margin: auto;
+
     }
 
     .skills-content h2 {
@@ -608,6 +568,24 @@ body {
 /* About Page */
 .about-content {
     padding: 50px 10%;
+    text-align: left;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.about-details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-photo {
+    flex: 1;
     text-align: center;
 }
 
@@ -624,25 +602,129 @@ body {
     margin-bottom: 20px;
 }
 
+.about-photo img {
+    width: 320px; /* Adjust width as needed */
+    height: auto;
+    border-radius: 2%; /* Ensures the photo is round */
+    opacity: 0.55; /* Set the opacity level */
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-text ul li {
+    margin-bottom: 16px;
+}
+
+.about-text h3 {
+    color: #00abf0;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-photo {
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.contact-photo img {
+    width: 300px;
+    /* Adjust width as needed */
+    height: auto;
+    border-radius: 1ch;
+}
+
+.contact-links {
+    text-align: center;
+}
+
+.contact-links a {
+    color: #00abf0;
+    font-size: 30px;
+    margin: 0 20px;
+}
+
+.contact-links a:hover {
+    color: #ededed;
+}
+
+
+
 
 @media screen and (max-width: 768px) {
     .about-content {
         padding: 100px 10%;
-        padding-top: 100px;
-        padding-bottom: 0px;
+        padding-top: 105px;
+        padding-bottom: 30px;
         /* Adjust padding for mobile */
     }
 
     .about-content h2 {
         font-size: 28px;
         /* Decrease heading size for mobile */
+        text-align: center;
     }
 
     .about-content p {
-        font-size: 18px;
+        font-size: 16px;
         /* Decrease text size for mobile */
+        text-align: justify;
+    }
+
+    .about-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: left;
+    }
+
+    .about-photo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-photo img {
+        width: 70%; /* Adjust width of photo for mobile */
+        border-radius: 50%; /* Ensures the photo is round */
+        text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .contact-photo img {
+        width: 80%;
+        /* Adjust image width */
+        max-width: 300px;
+        /* Limit maximum width */
+        height: auto;
+        /* Automatically adjust height */
+        border-radius: 10px;
+        /* Add border radius if needed */
+    }
+
+    .contact-links {
+        display: flex;
+        /* Display links horizontally */
+        justify-content: center;
+        /* Center align links */
+    }
+
+    .contact-links a {
+        margin: 0 12px;
+        /* Add space between links */
     }
 }
+
+
 
 
 /* thanks */
