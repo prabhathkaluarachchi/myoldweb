@@ -65,15 +65,42 @@
     <section id="About" class="content">
         <div class="about-content container">
             <h2>About Me</h2>
-            <p>I'm Prabhath Kaluarachchi, an undergraduate student at The Open University of Sri Lanka, pursuing a
-                degree in Bachelor of Software Engineering Honours. Born on June 25, 1999, I hail from Kandy. </p>
-            <p>I'm passionate about software development and constantly strive to expand my knowledge and skills in this
-                field.</p>
-            <p>Throughout my education, I've been dedicated to learning various programming languages and technologies
-                to develop innovative solutions. I believe in the power of technology to bring positive change, and I'm
-                committed to contributing to this transformation.</p>
+            <div class="about-details">
+                <div class="about-text">
+                    <p>
+                        I'm an undergraduate student at The Open University of Sri Lanka, pursuing
+                        a degree in Bachelor of Software Engineering Honours.
+                    <p>
+                        Throughout my education, I've been
+                        dedicated to learning various programming languages
+                        and technologies to develop innovative solutions.
+                    </p>
+                    </p>
+                    <h3>Info:</h3>
+                    <ul>
+                        <li><i class='bx bxs-school' ></i> Walala, A.Rathnayake Central College</li>
+                        <li><i class='bx bxs-cake' ></i> 1999/06/25</li>
+                        <li><i class='bx bxs-location-plus'></i> Gonawala, Rajawella </li>
+                        <li><i class='bx bx-mobile' ></i>+94 77 234 7420</li>
+                    </ul>
+                </div>
+                <div class="about-photo">
+                    <img src="Images/pnew2.jpg" alt="Prabhath's Photo">
+                    <div class="contact-links">
+                        <a href="https://web.facebook.com/prabhathtkaluarachchi/" target="_blank"><i
+                                class='bx bxl-facebook-circle'></i></a>
+                        <a href="#Contact" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                        <a href="https://wa.me/94772347420" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="https://www.instagram.com/prabhathtkaluarachchi/" target="_blank"><i
+                                class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
+
+
 
 
     <!-- Section 3 -->
@@ -203,31 +230,15 @@
                         <h2>Contact Me</h2>
                         <p>Feel free to reach out to me for any inquiries or collaborations. I'm always open to new
                             opportunities and exciting projects!</p><br>
-                        <form class="contact-form" action="https://formsubmit.co/fmprabhath@gmail.com" method="post"
-                            enctype="text/plain">
+                        <form class="contact-form" action="https://api.web3forms.com/submit" method="post">
+                            <input type="hidden" name="access_key" value="2562225c-e961-46a6-923e-244675b3ce89">
                             <input type="text" name="name" placeholder="Your Name" required>
                             <input type="email" name="email" placeholder="Your Email" required>
                             <textarea name="message" placeholder="Your Message" required></textarea>
                             <input type="hidden" name="_next" value="#thanks">
                             <button type="submit">Send</button>
+                            <button type="reset">Clear</button>
                         </form>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="contact-left">
-                        <div class="contact-photo">
-                            <img src="Images/pnew2.jpg" alt="Prabhath Kaluarachchi" class="img-fluid">
-                        </div>
-                        <div class="contact-links">
-                            <a href="https://web.facebook.com/prabhathtkaluarachchi/" target="_blank"><i
-                                    class='bx bxl-facebook-circle'></i></a>
-                            <a href="#Contact" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-                            <a href="https://github.com/prabhathkaluarachchi" target="_blank"><i
-                                    class='bx bxl-github'></i></a>
-                            <a href="https://wa.me/94772347420" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-                            <a href="https://www.instagram.com/prabhathtkaluarachchi/" target="_blank"><i
-                                    class='bx bxl-instagram'></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -253,6 +264,7 @@
 
 
     <script src="script.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 
 </html>
