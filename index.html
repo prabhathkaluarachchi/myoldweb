@@ -235,7 +235,8 @@
                             <input type="text" name="name" placeholder="Your Name" required>
                             <input type="email" name="email" placeholder="Your Email" required>
                             <textarea name="message" placeholder="Your Message" required></textarea>
-                            <input type="hidden" name="_next" value="#thanks">
+                            <!-- <input type="hidden" name="redirect" value="https://prabhath.me/#Contact"> -->
+                            <input type="hidden" name="subject" value="New msg from prabhath.me">
                             <button type="submit">Send</button>
                             <button type="reset">Clear</button>
                         </form>
@@ -245,13 +246,6 @@
         </div>
     </section>
 
-    <!-- Section 6 -->
-    <section id="thanks" class="content">
-        <div class="thanks-content container">
-            <h2><i class='bx bxs-message-alt-check'></i></h2>
-            <p>Thank you for contact me!</p>
-        </div>
-    </section>
 
     <!-- Footer Area -->
     <footer class="footer">
@@ -265,6 +259,7 @@
 
     <script src="script.js"></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
+    
 </body>
 
 </html>
