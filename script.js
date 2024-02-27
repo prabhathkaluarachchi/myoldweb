@@ -135,3 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+
+    window.onload = function() {
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            alert("Right-click has been disabled. Please contact the administrator for assistance.");
+        });
+    };
